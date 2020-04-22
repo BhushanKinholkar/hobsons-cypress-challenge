@@ -1,0 +1,12 @@
+{
+  "name": "project-nodejs-express",
+  "version": "1.0.0",
+  "description": "Project template for Coderbyte",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
