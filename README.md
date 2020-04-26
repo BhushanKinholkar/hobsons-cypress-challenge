@@ -1,4 +1,4 @@
-![Coderbyte logo](https://coderbytestaticimages.s3.amazonaws.com/coderbyte_icon_digital_navy.png)
+<img src="https://coderbytestaticimages.s3.amazonaws.com/coderbyte_icon_digital_navy.png" width="70">
 
 # Node.js & Express project
 for use on Coderbyte 
