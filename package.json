@@ -1,12 +1,13 @@
 {
-  "name": "project-nodejs-express",
+  "name": "hobsons-cypress-challenge",
   "version": "1.0.0",
-  "description": "Project template for Coderbyte",
-  "main": "./src/index.js",
+  "description": "Hobsons QA Engineer Cypress challenge",
+  "main": "",
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "cypress open"
   },
-  "dependencies": {
-    "express": "^4.17.1"
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "*"
   }
 }

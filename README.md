@@ -1,6 +1,6 @@
 <img src="https://coderbytestaticimages.s3.amazonaws.com/coderbyte_icon_digital_navy.png" width="70">
 
-# Node.js & Express project
+# Hobsons Cypress Code Challenge
 for use on Coderbyte 
 
 ## Instructions for using this project template
