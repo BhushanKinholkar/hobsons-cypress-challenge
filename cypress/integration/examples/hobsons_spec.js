@@ -16,18 +16,59 @@ describe('Test cases on hobsons', function(){
         cy.get('.block-title__title').scrollIntoView()
  
     })
-
+ 
     it('Select the NC and SC',function(){
-
+ 
         cy.get('.block-stats-map__state-dropdown').select('North Carolina & South Carolina')
         cy.get('.block-stats-map__mobile-popup-text').then(($data) => 
         {
             const name = $data.text()
             cy.log(name)
             expect(name).to.equal('26% to 50% of Students')
-
-            cy.log()
         })
+
+        cy.wait(3000)
     })
+
+    it('Select the GA',function()
+    {
+        cy.get('.block-stats-map__state-dropdown').select('Georgia')
+        cy.get('.block-stats-map__mobile-popup-text').then(($data) => 
+        {
+            const name = $data.text()
+            cy.log(name)
+            expect(name).to.equal('26% to 50% of Students')
+        })
+        cy.wait(3000)
+
+    })
+
+    it('Select the FL',function()
+    {
+        cy.get('.block-stats-map__state-dropdown').select('Florida')
+        cy.get('.block-stats-map__mobile-popup-text').then(($data) => 
+        {
+            const name = $data.text()
+            cy.log(name)
+            expect(name).to.equal('26% to 50% of Students')
+        })
+        cy.wait(3000)
+
+    })
+
+    it('Select the VA',function()
+    {
+        cy.get('.block-stats-map__state-dropdown').select('Virginia')
+        cy.get('.block-stats-map__mobile-popup-text').then(($data) => 
+        {
+            const name = $data.text()
+            cy.log(name)
+            expect(name).to.equal('50% of Students')
+        })
+
+        
+    })
+
+
  
 })
