@@ -66,6 +66,7 @@ describe('Test cases on hobsons', function(){
             expect(name).to.equal('50% of Students')
         })
 
+        cy.log()
     })
 
 
