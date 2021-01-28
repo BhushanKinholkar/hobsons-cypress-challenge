@@ -21,7 +21,6 @@ describe('Test cases on hobsons', function(){
     it('Select the NC and SC, GA, FL',function()
     {
         const arry = ['North Carolina & South Carolina','Georgia','Florida'];
-        cy.log(arry)
         for(var a = 0; a < arry.length; a++)
         {
             cy.get('.block-stats-map__state-dropdown').select(arry[a])
