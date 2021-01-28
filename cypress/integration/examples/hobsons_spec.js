@@ -8,54 +8,33 @@ describe('Test cases on hobsons', function(){
  
     })
  
-    it('Click on the intersect',function(){
- 
+    it('Click on the intersect',function()
+    {
         cy.get('.card-home-banner__image-container').eq(1).trigger('mouseover')
         cy.get('.card-home-banner__lower span').eq(1).click()
         cy.url().should('include','/intersect/')
         cy.get('.block-title__title').scrollIntoView()
  
     })
- 
-    it('Select the NC and SC',function(){
- 
-        cy.get('.block-stats-map__state-dropdown').select('North Carolina & South Carolina')
-        cy.get('.block-stats-map__mobile-popup-text').then(($data) => 
-        {
-            const name = $data.text()
-            cy.log(name)
-            expect(name).to.equal('26% to 50% of Students')
-        })
 
-        cy.wait(3000)
-    })
 
-    it('Select the GA',function()
+    it('Select the NC and SC, GA, FL',function()
     {
-        cy.get('.block-stats-map__state-dropdown').select('Georgia')
-        cy.get('.block-stats-map__mobile-popup-text').then(($data) => 
+        const arry = ['North Carolina & South Carolina','Georgia','Florida'];
+        cy.log(arry)
+        for(var a = 0; a < arry.length; a++)
         {
-            const name = $data.text()
-            cy.log(name)
-            expect(name).to.equal('26% to 50% of Students')
-        })
-        cy.wait(3000)
-
+            cy.get('.block-stats-map__state-dropdown').select(arry[a])
+            cy.get('.block-stats-map__mobile-popup-text').then(($data) => 
+            {
+                const name = $data.text()
+                cy.log(name)
+                expect(name).to.equal('26% to 50% of Students')
+            })
+        }
+       
     })
-
-    it('Select the FL',function()
-    {
-        cy.get('.block-stats-map__state-dropdown').select('Florida')
-        cy.get('.block-stats-map__mobile-popup-text').then(($data) => 
-        {
-            const name = $data.text()
-            cy.log(name)
-            expect(name).to.equal('26% to 50% of Students')
-        })
-        cy.wait(3000)
-
-    })
-
+    
     it('Select the VA',function()
     {
         cy.get('.block-stats-map__state-dropdown').select('Virginia')
@@ -65,10 +44,8 @@ describe('Test cases on hobsons', function(){
             cy.log(name)
             expect(name).to.equal('50% of Students')
         })
-
-        
     })
 
-
- 
 })
+
+
